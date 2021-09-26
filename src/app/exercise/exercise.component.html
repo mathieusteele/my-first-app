@@ -1,0 +1,17 @@
+<button (click)="toggleDisplayDetails()" class="btn btn-primary">
+  Display Details
+</button>
+
+<p *ngIf="displayDetails">Secret Password = swordfish</p>
+
+Clicks:
+
+<ul>
+  <li
+    *ngFor="let click of clicks; let i = index"
+    [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+    [ngClass]="{ 'white-text': i >= 5 }"
+  >
+    {{ click }}
+  </li>
+</ul>
